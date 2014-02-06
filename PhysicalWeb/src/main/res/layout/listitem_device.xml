@@ -6,19 +6,12 @@
 
     <ImageView
             android:id="@+id/icon"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="4dp"
             android:src="@drawable/ic_launcher" >
     </ImageView>
 
-    <TextView
-            android:id="@+id/url"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Device URL"
-            android:fontFamily="sans-serif-condensed"
-            android:textSize="20dp" >
-    </TextView>
 
     <TextView
             android:id="@+id/title"
@@ -26,9 +19,18 @@
             android:layout_height="wrap_content"
             android:text="Loading title..."
             android:textSize="20dp"
-            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed">
+    </TextView>
+
+    <TextView
+            android:id="@+id/url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device URL"
             android:fontFamily="sans-serif-condensed"
-            android:gravity="end">
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textSize="20dp" >
     </TextView>
 
 </LinearLayout>
