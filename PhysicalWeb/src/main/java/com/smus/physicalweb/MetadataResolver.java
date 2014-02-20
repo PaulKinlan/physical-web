@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.util.Patterns;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -21,6 +22,7 @@ public class MetadataResolver {
   MetadataResolver() {
     mDeviceUrlMap = new HashMap<String, String>();
     mDeviceUrlMap.put("OLP425-ECF5", "http://z3.ca/light");
+    mDeviceUrlMap.put("OLP425-ECB5", "http://z3.ca/1");
   }
 
   public String getURLForDevice(NearbyDevice device) {
@@ -46,6 +48,15 @@ public class MetadataResolver {
     mMetadataListener = listener;
   }
 
+  public String getIconUrl(Document doc) {
+    Element element = doc.head().select("link[href~=.*\\.(ico|png)]").first();
+    String url = null;
+    if (element != null) {
+      return element.attr("href");
+    }
+    return url;
+  }
+
   private class GetMetadataTask extends AsyncTask<String, Void, DeviceMetadata> {
 
     @Override
@@ -58,6 +69,7 @@ public class MetadataResolver {
         Document doc = Jsoup.connect(url).get();
         DeviceMetadata deviceMetadata = new DeviceMetadata();
         deviceMetadata.title = doc.title();
+        deviceMetadata.iconUrl = getIconUrl(doc);
         return deviceMetadata;
       } catch (IOException e) {
         e.printStackTrace();

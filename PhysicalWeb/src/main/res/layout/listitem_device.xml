@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
               android:layout_width="fill_parent"
+              android:padding="6dp"
               android:layout_height="wrap_content" >
 
     <ImageView
@@ -20,17 +21,6 @@
             android:text="Loading title..."
             android:textSize="20dp"
             android:fontFamily="sans-serif-condensed">
-    </TextView>
-
-    <TextView
-            android:id="@+id/url"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Device URL"
-            android:fontFamily="sans-serif-condensed"
-            android:layout_weight="1"
-            android:gravity="end"
-            android:textSize="20dp" >
     </TextView>
 
 </LinearLayout>

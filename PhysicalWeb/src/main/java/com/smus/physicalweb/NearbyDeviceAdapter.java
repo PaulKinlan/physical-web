@@ -54,8 +54,6 @@ public class NearbyDeviceAdapter extends BaseAdapter {
     View view = mActivity.getLayoutInflater().inflate(
         R.layout.listitem_device, null);
     NearbyDevice device = mNearbyDevices.get(position);
-    TextView textView = (TextView) view.findViewById(R.id.url);
-    textView.setText(device.getUrl());
 
     DeviceMetadata deviceMetadata = device.getInfo();
     if (deviceMetadata != null) {
