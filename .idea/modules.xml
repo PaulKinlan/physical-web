@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DeviceURLs/DeviceURLs.iml" filepath="$PROJECT_DIR$/DeviceURLs/DeviceURLs.iml" />
       <module fileurl="file://$PROJECT_DIR$/PhysicalWeb/PhysicalWeb.iml" filepath="$PROJECT_DIR$/PhysicalWeb/PhysicalWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/physical-web.iml" filepath="$PROJECT_DIR$/physical-web.iml" />
     </modules>

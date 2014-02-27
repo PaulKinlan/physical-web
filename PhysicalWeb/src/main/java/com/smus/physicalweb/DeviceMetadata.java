@@ -5,5 +5,7 @@ package com.smus.physicalweb;
  */
 public class DeviceMetadata {
   public String title;
+  public String siteURL;
+  public String description;
   public String iconUrl;
 }
