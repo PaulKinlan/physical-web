@@ -69,6 +69,12 @@ public class MetadataResolver {
         Document doc = Jsoup.connect(url).get();
         DeviceMetadata deviceMetadata = new DeviceMetadata();
         deviceMetadata.title = doc.title();
+        deviceMetadata.siteURL = url;
+        String description = doc.select("meta[name=description]").get(0).attr("content");
+        if (url != null) {
+          deviceMetadata.description = description;
+        }
+
         deviceMetadata.iconUrl = getIconUrl(doc);
         return deviceMetadata;
       } catch (IOException e) {
