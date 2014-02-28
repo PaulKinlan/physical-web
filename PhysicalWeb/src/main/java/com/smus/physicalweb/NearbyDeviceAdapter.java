@@ -61,7 +61,7 @@ public class NearbyDeviceAdapter extends BaseAdapter {
       infoView.setText(deviceMetadata.title);
 
       infoView = (TextView) view.findViewById(R.id.url);
-      infoView.setText(deviceMetadata.siteURL);
+      infoView.setText(deviceMetadata.siteUrl);
 
       infoView = (TextView) view.findViewById(R.id.description);
       infoView.setText(deviceMetadata.description);
