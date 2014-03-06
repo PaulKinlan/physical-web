@@ -1,0 +1,47 @@
+<head>
+<style>
+#lamp {
+  margin: 20px auto;
+  background-image: url(images/lamp-off.png);
+  width: 128px;
+  height: 128px;
+}
+#lamp.on {
+  background-image: url(images/lamp-on.png);
+}
+
+#switch {
+  margin: 0 auto;
+  background-image: url(images/switch-off.png);
+  background-size: 100%;
+  width: 150px;
+  height: 200px;
+}
+#switch.on {
+  background-image: url(images/switch-on.png);
+}
+
+#debug { display: none; }
+#command::before { content: '> '; }
+</style>
+
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+<title>Research Lamp</title>
+</head>
+
+<body>
+<div id="debug">
+  <button onclick="lamp.on()">On</button>
+  <button onclick="lamp.off()">Off</button>
+  <div id="command"></div>
+</div>
+
+
+<div id="switch" onclick="lamp.toggle()"></div>
+<div id="lamp"></div>
+
+<script src="js/lamp-controller.js"></script>
+<script src="js/speech-engine.js"></script>
+<script src="js/main.js"></script>
+</body>

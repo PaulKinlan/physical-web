@@ -16,6 +16,7 @@ public class NearbyDevice implements MetadataResolver.OnMetadataListener {
   private int mLastRSSI;
   private DeviceMetadata mDeviceMetadata;
   private String mUrl;
+  private NearbyDeviceAdapter mAdapter;
 
   public NearbyDevice(BluetoothDevice bluetoothDevice, int RSSI) {
     mBluetoothDevice = bluetoothDevice;
@@ -26,12 +27,26 @@ public class NearbyDevice implements MetadataResolver.OnMetadataListener {
     mUrl = resolver.getURLForDevice(this);
   }
 
-  public BluetoothDevice getBluetoothDevice() {
-    return mBluetoothDevice;
+  // Constructor for testing purposes only.
+  public NearbyDevice(String url) {
+    mUrl = url;
+    mLastSeen = System.nanoTime();
   }
+
+  public void setAdapter(NearbyDeviceAdapter adapter) {
+    mAdapter = adapter;
+  }
+
   public int getLastRSSI() { return mLastRSSI; }
   public DeviceMetadata getInfo() { return mDeviceMetadata; }
   public String getUrl() { return mUrl; }
+  public String getName() {
+    if (mBluetoothDevice != null) {
+      return mBluetoothDevice.getName();
+    } else {
+      return mUrl;
+    }
+  }
 
   public void updateLastSeen(int RSSI) {
     mLastSeen = System.nanoTime();
@@ -55,9 +70,16 @@ public class NearbyDevice implements MetadataResolver.OnMetadataListener {
   @Override
   public void onDeviceInfo(DeviceMetadata deviceMetadata) {
     mDeviceMetadata = deviceMetadata;
+    if (mAdapter != null) {
+      mAdapter.updateListUI();
+    }
   }
 
   public boolean isBroadcastingUrl() {
     return mUrl != null;
+  }
+
+  public boolean equalsBluetooth(BluetoothDevice bluetoothDevice) {
+    return mBluetoothDevice.equals(bluetoothDevice);
   }
 }

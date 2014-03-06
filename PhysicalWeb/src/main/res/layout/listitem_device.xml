@@ -10,23 +10,23 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginRight="16dp"
-        android:src="@drawable/ic_launcher" >
+        android:src="@drawable/ic_launcher">
     </ImageView>
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/title"
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Loading title..."
-            android:textSize="20dp"
-            android:fontFamily="sans-serif-condensed"
-            android:textColor="@color/header_color">
+            android:orientation="vertical" >
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading title..."
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/header_color">
         </TextView>
 
         <TextView
