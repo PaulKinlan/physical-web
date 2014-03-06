@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+              android:orientation="horizontal"
               android:layout_width="fill_parent"
               android:padding="6dp"
               android:layout_height="wrap_content" >
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
 
-        <ImageView
+    <ImageView
             android:id="@+id/icon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_marginRight="8dp"
             android:src="@drawable/ic_launcher" >
-        </ImageView>
+    </ImageView>
 
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/title"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Loading title..."
-            android:textSize="20dp"
-            android:fontFamily="sans-serif-condensed"
-            android:textColor="@color/header_color">
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading title..."
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/header_color">
         </TextView>
+
+        <TextView
+                android:id="@+id/url"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="example.com"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/url_color">
+        </TextView>
+
+        <TextView
+                android:id="@+id/description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Example description"
+                android:textSize="16dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/description_color">
+        </TextView>
+
     </LinearLayout>
-
-    <TextView
-            android:id="@+id/url"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:text="something.com"
-            android:textSize="16dp"
-            android:fontFamily="sans-serif-condensed"
-            android:textColor="@color/url_color">
-    </TextView>
-
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:text="This is a description of the web site"
-        android:textSize="16dp"
-        android:fontFamily="sans-serif-condensed"
-        android:textColor="@color/description_color">
-    </TextView>
 </LinearLayout>

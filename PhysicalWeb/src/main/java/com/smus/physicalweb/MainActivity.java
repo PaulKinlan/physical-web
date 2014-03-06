@@ -17,6 +17,7 @@ public class MainActivity extends Activity implements NearbyDeviceManager.OnNear
   private String TAG = "MainActivity";
 
   private NearbyDeviceManager mDeviceManager;
+  private NearbyDevice mMockDevice = new NearbyDevice("http://z3.ca/1");
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -54,10 +55,18 @@ public class MainActivity extends Activity implements NearbyDeviceManager.OnNear
     // automatically handle clicks on the Home/Up button, so long
     // as you specify a parent activity in AndroidManifest.xml.
     switch (item.getItemId()) {
-      case R.id.action_settings:
-        return true;
       case R.id.action_scan:
         mDeviceManager.scanDebug();
+        return true;
+      case R.id.action_debug:
+        NearbyDevice device = new NearbyDevice("http://z3.ca/1");
+        mDeviceManager.getAdapter().addDevice(device);
+        device.downloadMetadata();
+        return true;
+      case R.id.action_debug2:
+        device = new NearbyDevice("http://z3.ca/2");
+        mDeviceManager.getAdapter().addDevice(device);
+        device.downloadMetadata();
         return true;
     }
     return super.onOptionsItemSelected(item);
@@ -65,13 +74,13 @@ public class MainActivity extends Activity implements NearbyDeviceManager.OnNear
 
   @Override
   public void onDeviceFound(NearbyDevice device) {
-    Log.i(TAG, "Found a device: " + device.getBluetoothDevice().getName());
+    Log.i(TAG, "Found a device: " + device.getName());
     mDeviceManager.getAdapter().updateListUI();
   }
 
   @Override
   public void onDeviceLost(NearbyDevice device) {
-    Log.i(TAG, "Lost a device: " + device.getBluetoothDevice().getName());
+    Log.i(TAG, "Lost a device: " + device.getName());
   }
 
   /**

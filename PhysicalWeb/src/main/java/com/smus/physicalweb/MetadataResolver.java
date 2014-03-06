@@ -1,12 +1,17 @@
 package com.smus.physicalweb;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Patterns;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,7 +32,7 @@ public class MetadataResolver {
 
   public String getURLForDevice(NearbyDevice device) {
     // If the device name is already a URL, use it.
-    String deviceName = device.getBluetoothDevice().getName();
+    String deviceName = device.getName();
     String url = deviceName;
     if (Patterns.WEB_URL.matcher(deviceName).matches()) {
       // TODO(smus): Fix this hack.
@@ -49,10 +54,18 @@ public class MetadataResolver {
   }
 
   public String getIconUrl(Document doc) {
+    // If there's an explicit favicon referenced, get it.
     Element element = doc.head().select("link[href~=.*\\.(ico|png)]").first();
     String url = null;
     if (element != null) {
-      return element.attr("href");
+      url = element.attr("href");
+      // The icon might be a relative URL.
+      if (!url.startsWith("http")) {
+        // Prepend the URL of the doc.
+        url = doc.baseUri() + url;
+      }
+    } else {
+      url = doc.baseUri() + "favicon.ico";
     }
     return url;
   }
@@ -65,22 +78,22 @@ public class MetadataResolver {
       if (url == null) {
         return null;
       }
+      DeviceMetadata deviceMetadata = new DeviceMetadata();
       try {
         Document doc = Jsoup.connect(url).get();
-        DeviceMetadata deviceMetadata = new DeviceMetadata();
         deviceMetadata.title = doc.title();
         deviceMetadata.siteUrl = url;
-        String description = doc.select("meta[name=description]").get(0).attr("content");
-        if (url != null) {
-          deviceMetadata.description = description;
+        Elements descriptions = doc.select("meta[name=description]");
+        if (descriptions.size() > 0) {
+          deviceMetadata.description = descriptions.get(0).attr("content");
         }
 
         deviceMetadata.iconUrl = getIconUrl(doc);
-        return deviceMetadata;
-      } catch (IOException e) {
+        deviceMetadata.icon = downloadIcon(deviceMetadata.iconUrl);
+      } catch (Exception e) {
         e.printStackTrace();
       }
-      return null;
+      return deviceMetadata;
     }
 
 
@@ -92,7 +105,12 @@ public class MetadataResolver {
       }
       mMetadataListener.onDeviceInfo(result);
     }
+  }
 
+  public Bitmap downloadIcon(String url) throws IOException {
+    InputStream is = (InputStream) new URL(url).getContent();
+    Bitmap d = BitmapFactory.decodeStream(is);
+    return d;
   }
 
   public interface OnMetadataListener {

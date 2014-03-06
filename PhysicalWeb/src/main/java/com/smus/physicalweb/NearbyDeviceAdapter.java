@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothDevice;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -36,17 +37,8 @@ public class NearbyDeviceAdapter extends BaseAdapter {
 
   @Override
   public long getItemId(int position) {
-    BluetoothDevice device = mNearbyDevices.get(position).getBluetoothDevice();
-    String address = device.getAddress();
-    long id = 0;
-    int index = 0;
-    for (String token: address.split(":")) {
-      long decode = Long.parseLong(token, 16);
-      id |= (decode << (index * 8));
-      index += 1;
-    }
-//    Log.i(TAG, String.format("Device Mac %s is %d", address, id));
-    return id;
+    NearbyDevice device = mNearbyDevices.get(position);
+    return System.identityHashCode(device);
   }
 
   @Override
@@ -65,6 +57,9 @@ public class NearbyDeviceAdapter extends BaseAdapter {
 
       infoView = (TextView) view.findViewById(R.id.description);
       infoView.setText(deviceMetadata.description);
+
+      ImageView iconView = (ImageView) view.findViewById(R.id.icon);
+      iconView.setImageBitmap(deviceMetadata.icon);
     }
     return view;
   }
@@ -74,6 +69,7 @@ public class NearbyDeviceAdapter extends BaseAdapter {
       @Override
       public void run() {
         mNearbyDevices.add(device);
+        device.setAdapter(NearbyDeviceAdapter.this);
         notifyDataSetChanged();
       }
     });
@@ -81,7 +77,7 @@ public class NearbyDeviceAdapter extends BaseAdapter {
 
   public NearbyDevice getNearbyDevice(BluetoothDevice bluetoothDevice) {
     for (NearbyDevice device : mNearbyDevices) {
-      if (device.getBluetoothDevice().equals(bluetoothDevice)) {
+      if (device.equalsBluetooth(bluetoothDevice)) {
         return device;
       }
     }

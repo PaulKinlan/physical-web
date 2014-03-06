@@ -9,9 +9,17 @@
     <shared>
       <config />
     </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/listitem_device.xml">
+        <config>
+          <device>Nexus 5</device>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+    </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ASSERT" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="INFO" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61b9bd0f-49fa-41e4-9a00-e6d6d993605f" name="Default" comment="" />
@@ -86,19 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NearbyDeviceAdapter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="45" selection-start="1768" selection-end="1768" vertical-scroll-proportion="0.33199194" vertical-offset="675" max-vertical-offset="1650">
+            <state line="56" column="31" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.33936653" vertical-offset="540" max-vertical-offset="1680">
               <folding />
             </state>
           </provider>
@@ -107,30 +106,55 @@
       <file leaf-file-name="MetadataResolver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataResolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="30" selection-start="2116" selection-end="2116" vertical-scroll-proportion="0.0" vertical-offset="868" max-vertical-offset="1485">
+            <state line="91" column="63" selection-start="2839" selection-end="2839" vertical-scroll-proportion="0.0" vertical-offset="948" max-vertical-offset="1680">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeviceMetadata.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/DeviceMetadata.java">
+      <file leaf-file-name="NearbyDeviceAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+            <state line="60" column="64" selection-start="1692" selection-end="1692" vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="1575">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NearbyDevice.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDevice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="30" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="673" max-vertical-offset="1365">
+              <folding>
+                <element signature="e#915#916#0" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="listitem_device.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/listitem_device.xml">
-          <provider editor-type-id="text-editor">
-            <state line="4" column="33" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="47" selection-start="291" selection-end="291" vertical-scroll-proportion="-2.7777777" vertical-offset="0" max-vertical-offset="900">
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
+          <provider editor-type-id="android-designer">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/menu/main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="47" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+              <folding>
+                <element signature="e#217#238#0" expanded="true" />
+                <element signature="e#388#410#0" expanded="true" />
+                <element signature="e#560#583#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -517,21 +541,24 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/devices/1" />
-        <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MainActivity.java" />
         <option value="$PROJECT_DIR$/PhysicalWeb/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/PhysicalWeb/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/PhysicalWeb/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/listitem_device.xml" />
+        <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MockBluetoothDevice.java" />
+        <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDevice.java" />
         <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/DeviceMetadata.java" />
         <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataResolver.java" />
         <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceAdapter.java" />
+        <option value="$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/listitem_device.xml" />
+        <option value="$PROJECT_DIR$/PhysicalWeb/src/main/res/menu/main.xml" />
+        <option value="$PROJECT_DIR$/PhysicalWeb/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MainActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="4" />
     <option name="y" value="22" />
-    <option name="width" value="1283" />
+    <option name="width" value="1436" />
     <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -560,7 +587,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -778,6 +804,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -793,7 +820,8 @@
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="03121545d0217dc5" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="T065000GW3" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="N4" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -829,6 +857,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -854,19 +895,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -948,7 +976,7 @@
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -984,36 +1012,36 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="22" width="1283" height="878" extended-state="0" />
+    <frame x="4" y="22" width="1436" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3683844" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39974457" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39974457" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32950193" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27981293" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2792479" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3686672" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1034,34 +1062,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1755">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="5" selection-start="2480" selection-end="2480" vertical-scroll-proportion="0.0" vertical-offset="1365" max-vertical-offset="1830">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/DeviceMetadata.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="1515">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="142" column="39" selection-start="4359" selection-end="4359" vertical-scroll-proportion="0.0" vertical-offset="2130" max-vertical-offset="2400">
@@ -1070,13 +1070,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/listitem_device.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="465">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/values/strings.xml">
@@ -1101,13 +1101,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/fragment_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="15" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="360">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MainActivity.java">
@@ -1146,13 +1146,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/listitem_device.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="615">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/values/strings.xml">
@@ -1191,13 +1191,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/listitem_device.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="615">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/values/strings.xml">
@@ -1236,13 +1236,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/listitem_device.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="615">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/values/strings.xml">
@@ -1281,13 +1281,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/listitem_device.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="615">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/values/strings.xml">
@@ -1295,16 +1295,6 @@
         <state line="3" column="40" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="225">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devices/1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="45" selection-start="113" selection-end="113" vertical-scroll-proportion="0.09933775" vertical-offset="0" max-vertical-offset="755" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devices/light">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="755" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/build.gradle">
@@ -1322,30 +1312,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="415">
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/fragment_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/fragment_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="15" selection-start="763" selection-end="763" vertical-scroll-proportion="-8.333333" vertical-offset="0" max-vertical-offset="360">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/PhysicalWeb/libs/jsoup-1.7.3.jar!/org/jsoup/nodes/Document.class">
@@ -1360,54 +1343,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-19/android/bluetooth/BluetoothAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="19" selection-start="3220" selection-end="3220" vertical-scroll-proportion="0.030181086" vertical-offset="630" max-vertical-offset="26010">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/PhysicalWeb/libs/jsoup-1.7.3.jar!/org/jsoup/nodes/Element.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="35" selection-start="1745" selection-end="1745" vertical-scroll-proportion="0.3539604" vertical-offset="502" max-vertical-offset="2880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="23" selection-start="52" selection-end="54" vertical-scroll-proportion="0.06369427" vertical-offset="0" max-vertical-offset="2190">
-          <folding />
+        <state line="37" column="35" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.0" vertical-offset="433" max-vertical-offset="2190">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/values/strings.xml">
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-19/android/graphics/drawable/Drawable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="33" selection-start="85" selection-end="85" vertical-scroll-proportion="0.09054326" vertical-offset="0" max-vertical-offset="497">
+        <state line="787" column="27" selection-start="29821" selection-end="29821" vertical-scroll-proportion="0.3325792" vertical-offset="10833" max-vertical-offset="15075">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/listitem_device.xml">
-      <provider editor-type-id="text-editor">
-        <state line="4" column="33" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-19/android/os/Trace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="198" column="0" selection-start="7538" selection-end="7538" vertical-scroll-proportion="0.0" vertical-offset="2553" max-vertical-offset="4110">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-19/android/graphics/BitmapFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="626" column="0" selection-start="27234" selection-end="27234" vertical-scroll-proportion="0.0" vertical-offset="8883" max-vertical-offset="10125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="30" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="673" max-vertical-offset="1365">
+          <folding>
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataResolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="30" selection-start="2116" selection-end="2116" vertical-scroll-proportion="0.0" vertical-offset="868" max-vertical-offset="1485">
+        <state line="91" column="63" selection-start="2839" selection-end="2839" vertical-scroll-proportion="0.0" vertical-offset="948" max-vertical-offset="1680">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/DeviceMetadata.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
+        <state line="11" column="16" selection-start="226" selection-end="226" vertical-scroll-proportion="0.37330317" vertical-offset="0" max-vertical-offset="442">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="45" selection-start="1768" selection-end="1768" vertical-scroll-proportion="0.33199194" vertical-offset="675" max-vertical-offset="1650">
+        <state line="60" column="64" selection-start="1692" selection-end="1692" vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="1575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/listitem_device.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="47" selection-start="291" selection-end="291" vertical-scroll-proportion="-2.7777777" vertical-offset="0" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="31" selection-start="324" selection-end="324" vertical-scroll-proportion="0.27149323" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="47" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding>
+            <element signature="e#217#238#0" expanded="true" />
+            <element signature="e#388#410#0" expanded="true" />
+            <element signature="e#560#583#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="31" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.33936653" vertical-offset="540" max-vertical-offset="1680">
           <folding />
         </state>
       </provider>
