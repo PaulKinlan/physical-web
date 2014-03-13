@@ -141,6 +141,7 @@ public class NearbyDeviceManager {
       if (nearbyDevice == null) {
         nearbyDevice = new NearbyDevice(device, RSSI);
         if (nearbyDevice.isBroadcastingUrl()) {
+          // Need to collect meta data
           nearbyDevice.downloadMetadata();
           mNearbyDeviceAdapter.addDevice(nearbyDevice);
           mListener.onDeviceFound(nearbyDevice);
