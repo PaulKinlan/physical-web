@@ -1,9 +1,14 @@
 package com.smus.physicalweb;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.util.Patterns;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -15,6 +20,15 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONObject;
+
 /**
  * Created by smus on 1/24/14.
  */
@@ -23,11 +37,14 @@ public class MetadataResolver {
 
   Map<String, String> mDeviceUrlMap;
   private OnMetadataListener mMetadataListener;
+  private RequestQueue queue;
 
-  MetadataResolver() {
+  MetadataResolver(Context context) {
     mDeviceUrlMap = new HashMap<String, String>();
     mDeviceUrlMap.put("OLP425-ECF5", "http://z3.ca/light");
     mDeviceUrlMap.put("OLP425-ECB5", "http://z3.ca/1");
+
+    queue = Volley.newRequestQueue(context);
   }
 
   public String getURLForDevice(NearbyDevice device) {
@@ -47,64 +64,87 @@ public class MetadataResolver {
     return url;
   }
 
-  public void getMetadata(String urlString, OnMetadataListener listener) {
-    GetMetadataTask t = new GetMetadataTask();
-    t.execute(urlString);
+  public void getMetadata(String urlString, int mLastRSSI, OnMetadataListener listener) {
+
+    // Request.
+    String url = "http://url-caster.appspot.com/resolve-scan";
+
+    JSONObject jsonObj = new JSONObject();
+
+    try {
+        JSONArray urlArray = new JSONArray();
+        JSONObject urlObject = new JSONObject();
+        urlObject.put("url", urlString);
+        urlObject.put("rssi", mLastRSSI);
+        urlArray.put(0, urlObject );
+
+        JSONObject location = new JSONObject();
+
+        location.put("lat", 49.129837);
+        location.put("lon", 120.38142);
+
+        jsonObj.put("location",  location);
+        jsonObj.put("objects", (Object) urlArray);
+
+    }
+    catch(JSONException ex) {
+
+    }
+
+    JsonObjectRequest jsObjRequest = new JsonObjectRequest(
+            url,
+            jsonObj,
+            new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject jsonResponse) {
+
+                    try {
+                        JSONArray foundMetaData = jsonResponse.getJSONArray("metadata");
+
+                        int deviceCount = foundMetaData.length();
+                        for(int i = 0; i < deviceCount; i++) {
+
+                            JSONObject deviceData = foundMetaData.getJSONObject(i);
+
+                            String title = "Unknown name";
+                            String url = "Unknown url";
+                            if(deviceData.has("title")) {
+                               title = deviceData.getString("title");
+                            }
+
+                            if(deviceData.has("url")) {
+                                url = deviceData.getString("url");
+                            }
+
+                            DeviceMetadata deviceMetadata = new DeviceMetadata();
+                            deviceMetadata.title = title;
+                            deviceMetadata.description = "TEST DESCRIPTION";
+                            deviceMetadata.siteUrl = url;
+
+                            mMetadataListener.onDeviceInfo(deviceMetadata);
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+
+                    return;
+                }
+            },
+            new Response.ErrorListener() {
+
+                @Override
+                public void onErrorResponse(VolleyError volleyError) {
+                    return;
+                }
+            }
+        );
+
+
+
     mMetadataListener = listener;
-  }
+    queue.add(jsObjRequest);
 
-  public String getIconUrl(Document doc) {
-    // If there's an explicit favicon referenced, get it.
-    Element element = doc.head().select("link[href~=.*\\.(ico|png)]").first();
-    String url = null;
-    if (element != null) {
-      url = element.attr("href");
-      // The icon might be a relative URL.
-      if (!url.startsWith("http")) {
-        // Prepend the URL of the doc.
-        url = doc.baseUri() + url;
-      }
-    } else {
-      url = doc.baseUri() + "favicon.ico";
-    }
-    return url;
-  }
-
-  private class GetMetadataTask extends AsyncTask<String, Void, DeviceMetadata> {
-
-    @Override
-    protected DeviceMetadata doInBackground(String... urlArgs) {
-      String url = urlArgs[0];
-      if (url == null) {
-        return null;
-      }
-      DeviceMetadata deviceMetadata = new DeviceMetadata();
-      try {
-        Document doc = Jsoup.connect(url).get();
-        deviceMetadata.title = doc.title();
-        deviceMetadata.siteUrl = url;
-        Elements descriptions = doc.select("meta[name=description]");
-        if (descriptions.size() > 0) {
-          deviceMetadata.description = descriptions.get(0).attr("content");
-        }
-
-        deviceMetadata.iconUrl = getIconUrl(doc);
-        deviceMetadata.icon = downloadIcon(deviceMetadata.iconUrl);
-      } catch (Exception e) {
-        e.printStackTrace();
-      }
-      return deviceMetadata;
-    }
-
-
-    @Override
-    protected void onPostExecute(DeviceMetadata result) {
-      if (result == null) {
-        result = new DeviceMetadata();
-        result.title = "Error.";
-      }
-      mMetadataListener.onDeviceInfo(result);
-    }
   }
 
   public Bitmap downloadIcon(String url) throws IOException {

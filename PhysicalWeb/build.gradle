@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.7.+'
+        classpath 'com.android.tools.build:gradle:0.9.+'
     }
 }
 apply plugin: 'android'
@@ -24,4 +24,5 @@ android {
 
 dependencies {
     compile files('libs/jsoup-1.7.3.jar')
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
 }

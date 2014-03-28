@@ -32,6 +32,7 @@ public class NearbyDeviceManager {
   private NearbyDeviceAdapter mNearbyDeviceAdapter;
   private OnNearbyDeviceChangeListener mListener;
 
+  private Activity mActivity;
   // How often to search for new devices (ms).
   private int SEARCH_PERIOD = 5000;
   // How often to check for expired devices.
@@ -60,6 +61,7 @@ public class NearbyDeviceManager {
     mNearbyDeviceAdapter = new NearbyDeviceAdapter(activity);
     mSearchTimer = new Timer();
     mExpireTimer = new Timer();
+    mActivity = activity;
   }
 
   /**
@@ -139,7 +141,7 @@ public class NearbyDeviceManager {
       NearbyDevice nearbyDevice = mNearbyDeviceAdapter.getNearbyDevice(device);
       // Check if this is a new device.
       if (nearbyDevice == null) {
-        nearbyDevice = new NearbyDevice(device, RSSI);
+        nearbyDevice = new NearbyDevice(device, mActivity, RSSI);
         if (nearbyDevice.isBroadcastingUrl()) {
           // Need to collect meta data
           nearbyDevice.downloadMetadata();

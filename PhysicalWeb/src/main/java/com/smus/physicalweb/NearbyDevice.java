@@ -1,6 +1,7 @@
 package com.smus.physicalweb;
 
 import android.bluetooth.BluetoothDevice;
+import android.app.Activity;
 
 /**
  * Represents a nearby device.
@@ -17,13 +18,15 @@ public class NearbyDevice implements MetadataResolver.OnMetadataListener {
   private DeviceMetadata mDeviceMetadata;
   private String mUrl;
   private NearbyDeviceAdapter mAdapter;
+  private Activity mActivity;
 
-  public NearbyDevice(BluetoothDevice bluetoothDevice, int RSSI) {
+  public NearbyDevice(BluetoothDevice bluetoothDevice, Activity activity, int RSSI) {
     mBluetoothDevice = bluetoothDevice;
     mLastRSSI = RSSI;
     mLastSeen = System.nanoTime();
+    mActivity = activity;
 
-    MetadataResolver resolver = new MetadataResolver();
+    MetadataResolver resolver = new MetadataResolver(activity);
     mUrl = resolver.getURLForDevice(this);
   }
 
@@ -59,11 +62,11 @@ public class NearbyDevice implements MetadataResolver.OnMetadataListener {
   }
 
   public boolean downloadMetadata() {
-    MetadataResolver resolver = new MetadataResolver();
+    MetadataResolver resolver = new MetadataResolver(mActivity);
     if (mUrl == null) {
       return false;
     }
-    resolver.getMetadata(mUrl, this);
+    resolver.getMetadata(mUrl, mLastRSSI, this);
     return true;
   }
 
