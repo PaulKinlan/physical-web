@@ -23,16 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="009e057e-41ca-4bb1-a115-f4ac744534d4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataRequest.java" afterPath="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataResolver.java" afterPath="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataResolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDevice.java" afterPath="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDevice.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceManager.java" afterPath="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PhysicalWeb/PhysicalWeb.iml" afterPath="$PROJECT_DIR$/PhysicalWeb/PhysicalWeb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PhysicalWeb/build.gradle" afterPath="$PROJECT_DIR$/PhysicalWeb/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/physical-web.iml" afterPath="$PROJECT_DIR$/physical-web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceAdapter.java" afterPath="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceAdapter.java" />
     </list>
     <ignored path="physical-web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,7 +91,7 @@
       <file leaf-file-name="NearbyDevice.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDevice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="693" max-vertical-offset="1365">
+            <state vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="1365">
               <caret line="68" column="41" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
               <folding>
                 <element signature="e#2057#2058#0" expanded="true" />
@@ -155,24 +147,24 @@
       <file leaf-file-name="NearbyDeviceAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1515">
-              <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="1485">
+              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MetadataResolver.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MetadataResolver.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataResolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.692307" vertical-offset="978" max-vertical-offset="2475">
-              <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.18844222" vertical-offset="1920" max-vertical-offset="2895">
+              <caret line="133" column="63" selection-start-line="133" selection-start-column="63" selection-end-line="133" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2687#4131#0" expanded="true" />
-                <element signature="e#4116#4117#0" expanded="true" />
-                <element signature="e#4145#4333#0" expanded="true" />
-                <element signature="e#4318#4319#0" expanded="true" />
+                <element signature="e#2711#5400#0" expanded="true" />
+                <element signature="e#5385#5386#0" expanded="true" />
+                <element signature="e#5414#5602#0" expanded="true" />
+                <element signature="e#5587#5588#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -198,11 +190,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MetadataRequest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MetadataRequest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1572327" vertical-offset="0" max-vertical-offset="477">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -814,11 +806,11 @@
         <option value="$PROJECT_DIR$/PhysicalWeb/src/main/res/layout/listitem_device.xml" />
         <option value="$PROJECT_DIR$/local.properties" />
         <option value="$PROJECT_DIR$/gradle/gradle/wrapper/gradle-wrapper.properties" />
-        <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceAdapter.java" />
         <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceManager.java" />
         <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataRequest.java" />
         <option value="$PROJECT_DIR$/PhysicalWeb/build.gradle" />
         <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDevice.java" />
+        <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceAdapter.java" />
         <option value="$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataResolver.java" />
       </list>
     </option>
@@ -1201,9 +1193,9 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32934928" sideWeight="0.49930555" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997344" sideWeight="0.51805556" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32934928" sideWeight="0.50069445" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.49930555" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3997344" sideWeight="0.51805556" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3997344" sideWeight="0.48194444" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1244,20 +1236,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataResolver.java</url>
-          <line>137</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataResolver.java</url>
-          <line>127</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="16" />
     </breakpoint-manager>
   </component>
@@ -1658,14 +1636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="1860">
-          <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="1650">
@@ -1701,6 +1671,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDeviceAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="1485">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/NearbyDevice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="693" max-vertical-offset="1365">
@@ -1714,23 +1700,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataResolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.692307" vertical-offset="978" max-vertical-offset="2475">
-          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.18844222" vertical-offset="1920" max-vertical-offset="2895">
+          <caret line="133" column="63" selection-start-line="133" selection-start-column="63" selection-end-line="133" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2687#4131#0" expanded="true" />
-            <element signature="e#4116#4117#0" expanded="true" />
-            <element signature="e#4145#4333#0" expanded="true" />
-            <element signature="e#4318#4319#0" expanded="true" />
+            <element signature="e#2711#5400#0" expanded="true" />
+            <element signature="e#5385#5386#0" expanded="true" />
+            <element signature="e#5414#5602#0" expanded="true" />
+            <element signature="e#5587#5588#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PhysicalWeb/src/main/java/com/smus/physicalweb/MetadataRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1572327" vertical-offset="0" max-vertical-offset="477">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>

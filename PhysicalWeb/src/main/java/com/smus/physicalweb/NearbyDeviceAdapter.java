@@ -84,8 +84,6 @@ public class NearbyDeviceAdapter extends BaseAdapter {
     return null;
   }
 
-
-
   public ArrayList<NearbyDevice> removeExpiredDevices() {
     // Get a list of devices that we need to remove.
     ArrayList<NearbyDevice> toRemove = new ArrayList<NearbyDevice>();

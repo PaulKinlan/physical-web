@@ -3,6 +3,7 @@ package com.smus.physicalweb;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.util.Patterns;
@@ -108,6 +109,10 @@ public class MetadataResolver {
 
                             String title = "Unknown name";
                             String url = "Unknown url";
+                            String description = "Unknown description";
+                            String iconUrl = "/favicon.ico";
+                            Uri fullIconUri;
+
                             if(deviceData.has("title")) {
                                title = deviceData.getString("title");
                             }
@@ -116,10 +121,33 @@ public class MetadataResolver {
                                 url = deviceData.getString("url");
                             }
 
+                            if(deviceData.has("description")) {
+                               description = deviceData.getString("description");
+                            }
+
+                            if(deviceData.has("favicon_url")) {
+                                // We might need to do some magic here.
+                                Uri fullUri = Uri.parse(url);
+                                iconUrl = deviceData.getString("favicon_url");
+
+                                if(!iconUrl.startsWith("http")) {
+                                    // Lets just assume we are dealing with a path
+
+                                    Uri.Builder builder = fullUri.buildUpon();
+                                    // just change the path
+                                    builder.path(iconUrl);
+
+                                    iconUrl = builder.toString();
+                                }
+
+                            }
+
                             DeviceMetadata deviceMetadata = new DeviceMetadata();
                             deviceMetadata.title = title;
-                            deviceMetadata.description = "TEST DESCRIPTION";
+                            deviceMetadata.description = description;
                             deviceMetadata.siteUrl = url;
+                            deviceMetadata.iconUrl = iconUrl;
+                            //deviceMetadata.icon = downloadIcon(iconUrl);
 
                             mMetadataListener.onDeviceInfo(deviceMetadata);
                         }
