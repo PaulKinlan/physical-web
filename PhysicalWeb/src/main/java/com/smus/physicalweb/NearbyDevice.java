@@ -66,7 +66,7 @@ public class NearbyDevice implements MetadataResolver.OnMetadataListener {
     if (mUrl == null) {
       return false;
     }
-    resolver.getMetadata(mUrl, mLastRSSI, this);
+    resolver.getMetadata(this);
     return true;
   }
 
